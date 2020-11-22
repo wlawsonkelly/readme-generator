@@ -1,63 +1,61 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = require("utils");
-const generate = require('./generateMarkdown');
-const colors = require("colors");
+const generateMarkdown = require('./generateMarkdown');
 
 inquirer
   .prompt([
     {
       type: 'input',
       message: 'What is your project title?',
-      name: 'title'.bgRed,
+      name: 'title',
     },
     {
       type: 'input',
       message: "Enter a description?",
-      name: 'description'.bgWhite,
+      name: 'description',
     },
       {
         type: 'list',
         message: "Pick a license?",
         choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
-        name: 'license'.bgGreen,
+        name: 'license',
       },
       {
         type: 'input',
         message: 'What is your github username?',
-        name: 'username'.bgBlue,
+        name: 'username',
       },
       {
         type: 'input',
         message: 'What is your email?',
-        name: 'email'.bgCyan,
+        name: 'email',
       },
       {
         type: 'input',
         message: 'What commands should be run to use your project?',
         default: 'npm i',
-        name: 'instals'.bgBlue,
+        name: 'instals',
       },
       {
         type: 'input',
         message: 'What commands should run to run tests',
         default: 'npm test',
-        name: 'tests'.bgBlue,
+        name: 'tests',
       },
       {
         type: 'input',
         message: 'What should the user know about using the repo?',
-        name: 'usage'.bgRed,
+        name: 'usage',
       },
       {
         type: 'input',
         message: 'What should the user know about contributing to the repo?',
-        name: 'contribute'.bgRed,
+        name: 'contribute',
       },
       
   ])
   .then((response) =>
-    fs.appendFile('readme.md', generate(response), (err) =>
+    fs.writeFile('readme.md', generateMarkdown(response), (err) =>
   err ? console.error(err) : console.log('Commit logged!')
     )
 );
