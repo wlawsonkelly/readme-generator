@@ -1,17 +1,17 @@
-# t
+# Make a readme
 
 ## Description
-    t
+    node index
 ## Installation
-    undefined
+    npm i
 ## Usage
-    d
+    Nothing, make commits as you wish
 ## Contributing
-    s
+    Nothing
 ## License
     MIT
 
 ## Questions?
-    Contact me @ t
-    Also follow me @ t
+    Contact me @ wlawsonkelly@gmail.com
+    Also follow me @ wlawsonkelly
   
