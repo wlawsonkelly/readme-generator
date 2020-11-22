@@ -1,0 +1,23 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "readme Genetor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlawsonkelly/readme-generator.git"
+  },
+  "author": "King Lawson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wlawsonkelly/readme-generator/issues"
+  },
+  "homepage": "https://github.com/wlawsonkelly/readme-generator#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^7.3.3"
+  }
+}
